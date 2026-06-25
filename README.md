@@ -8,7 +8,7 @@ Dentro de este último Portfolio, incluyo algunos de mis proyectos personales m�
 
 Deseo que sea de vuestro agrado.
 
-### 🎓Técnico Superior en Administración de Sistemas Informáticos en Red y Máster en Ciberseguridad
+### 🎓 Técnico Superior en Administración de Sistemas Informáticos en Red y Máster en Ciberseguridad
 
 #### The Power | Prometeo FP Oficial | Prometeo Cyber
 
