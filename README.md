@@ -1,17 +1,17 @@
-# PROYECTOS: Portfolio Profesional
+# Portfolio Profesional
 
-## 🧠 Proyectos realizados en HTML (básico) y HTML + CSS
-
-### Versión actualizada del Portfolio Profesional
+## Versión actualizada
 
 3ra. versión del Portfolio diseñado con HTML + CSS y con una orientación claramente profesional.
 
-Incluyo algunos de mis proyectos personales más destacados, además aplico mejoras adicionales respecto a las versiones ateriores.
+Dentro de este último Portfolio, incluyo algunos de mis proyectos personales más destacados, además aplico mejoras adicionales respecto a las versiones ateriores.
 
 Deseo que sea de vuestro agrado.
 
-#### Técnico Superior en Administración de Sistemas Informáticos en Red y Máster en Ciberseguridad
+### Técnico Superior en Administración de Sistemas Informáticos en Red y Máster en Ciberseguridad
 
-##### The Power | Prometeo FP Oficial | Prometeo Cyber
+#### The Power | Prometeo FP Oficial | Prometeo Cyber
 
-###### Versión moderna estilo cristal
+##### Versión tecnológica moderna estilo cristal responsivo
+
+###### 🧠 Repositorio de los proyectos realizados en HTML (básico) y HTML + CSS
