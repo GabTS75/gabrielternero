@@ -574,12 +574,14 @@ input[type="reset"] {
 
 .featured-project {
     grid-column: 1 / -1;
-    /* Ocupa todo el ancho del grid de proyectos, en vez de una columna más */
+    /* Ocupa todo el ancho del grid de proyectos, en vez de una
+       columna más */
     flex-direction: row;
     /* En escritorio: contenido a ancho completo, no en columna */
     border: 1px solid var(--accent);
     box-shadow: 0 0 0 1px rgba(56, 189, 248, 0.15), var(--glass-shadow);
-    margin-bottom: 10px;
+    margin-top: 30px;
+    margin-bottom: 40px;
 }
 
 .featured-content {
@@ -635,6 +637,7 @@ input[type="reset"] {
     border-radius: 20px;
     background: var(--glass-bg);
 }
+
 
 /* 9. SECCIÓN "Footer" */
 footer {
