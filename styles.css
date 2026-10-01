@@ -570,12 +570,80 @@ input[type="reset"] {
     font-size: 0.9rem;
 }
 
-/* 8. SECCIÓN "Footer" */
+/* 8. SECCIÓN "Proyecto Insignia" (VectorSec) */
+
+.featured-project {
+    grid-column: 1 / -1;
+    /* Ocupa todo el ancho del grid de proyectos, en vez de una columna más */
+    flex-direction: row;
+    /* En escritorio: contenido a ancho completo, no en columna */
+    border: 1px solid var(--accent);
+    box-shadow: 0 0 0 1px rgba(56, 189, 248, 0.15), var(--glass-shadow);
+    margin-bottom: 10px;
+}
+
+.featured-content {
+    padding: 32px;
+}
+
+.featured-badge {
+    display: inline-block;
+    font-size: 0.78rem;
+    font-weight: 600;
+    letter-spacing: 0.03em;
+    color: var(--accent);
+    background: rgba(56, 189, 248, 0.1);
+    border: 1px solid var(--glass-border);
+    padding: 5px 14px;
+    border-radius: 20px;
+    margin-bottom: 14px;
+}
+
+.featured-content h4 {
+    font-size: 1.4rem;
+    margin-bottom: 14px;
+}
+
+.featured-content p {
+    color: var(--text-smoke);
+    margin-bottom: 14px;
+}
+
+.featured-modules {
+    margin: 18px 0;
+    padding-left: 4px;
+}
+
+.featured-modules li {
+    color: var(--text-smoke);
+    font-size: 0.95rem;
+    margin-bottom: 8px;
+}
+
+.tech-stack {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin: 20px 0 10px;
+}
+
+.tech-tag {
+    font-size: 0.82rem;
+    color: var(--text-muted);
+    border: 1px solid var(--glass-border);
+    padding: 5px 13px;
+    border-radius: 20px;
+    background: var(--glass-bg);
+}
+
+/* 9. SECCIÓN "Footer" */
 footer {
     text-align: center;
-    padding: 60px 10px 40px 10px; /* Amplio espacio para el footer */
+    padding: 60px 10px 40px 10px;
+    /* Amplio espacio para el footer */
     border-top: 1px solid var(--glass-border);
-    margin-top: 60px; /* Separación entre el contenido y el footer */
+    margin-top: 60px;
+    /* Separación entre el contenido y el footer */
     background: var(--bg-medium);
 }
 
@@ -602,7 +670,7 @@ footer {
 
 }
 
-/* 9. MEDIA QUERIES */
+/* 10. MEDIA QUERIES */
 
 /* Ajustes para móviles, máximo 768px */
 @media (max-width: 768px) {
@@ -610,6 +678,15 @@ footer {
     /* Ajustes generales */
     main {
         padding: 0 10px;
+    }
+
+    /* Ajustes para VectorSec */
+    .featured-content {
+        padding: 24px;
+    }
+
+    .featured-content h4 {
+        font-size: 1.2rem;
     }
 
     /* Menú Móvil Activo */
