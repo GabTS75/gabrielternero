@@ -573,11 +573,8 @@ input[type="reset"] {
 /* 8. SECCIÓN "Proyecto Insignia" (VectorSec) */
 
 .featured-project {
-    grid-column: 1 / -1;
-    /* Ocupa todo el ancho del grid de proyectos, en vez de una
-       columna más */
-    flex-direction: row;
-    /* En escritorio: contenido a ancho completo, no en columna */
+    display: flex;
+    flex-direction: column;
     border: 1px solid var(--accent);
     box-shadow: 0 0 0 1px rgba(56, 189, 248, 0.15), var(--glass-shadow);
     margin-top: 30px;
