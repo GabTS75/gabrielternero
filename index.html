@@ -193,7 +193,8 @@
                             <li>
                                 <h4>Técnico Superior en Administración de Sistemas Informáticos en Red</h4>
 
-                                Centro de estudios: PROMETEO FP (España) | Grado Superior — 100% Oficial y Homologado<br>
+                                Centro de estudios: PROMETEO FP (España) | Grado Superior — 100% Oficial y
+                                Homologado<br>
                                 2025-2027 | En proceso — finalizado 1er. curso
                             </li> <br>
 
@@ -472,36 +473,51 @@
                     <h2 id="contactar">Contacto</h2><!-- Ancla sobre el encabezado de nivel 2 "Contacto" -->
 
                     <p> Puedes contactarme rellenando el siguiente formulario: </p>
+
                     <div>
-                        <form> <!-- Inicio del formulario de contacto. -->
+                        <form id="formContacto"> <!-- Inicio del formulario de contacto. -->
+                            <input type="hidden" name="access_key" value="de50fab6-8196-46a9-b37b-d1418a4a1e5c">
+                            <!-- Clave de acceso para el servicio de formulario. -->
+                            <input type="hidden" name="subject" value="Nuevo mensaje desde tu portfolio">
+                            <input type="hidden" name="from_name" value="Portfolio de Gabriel Ternero">
+                            <input type="checkbox" name="botcheck" style="display:none"> <!-- honeypot anti-spam -->
+
                             <label for="nombre">Nombre:</label> <!-- Etiqueta para el nombre. -->
                             <input type="text" id="nombre" name="nombre" placeholder="escribe tu nombre"
-                                required><br><br>
-                            <!-- Campo de texto para el nombre que es obligatorio. -->
+                                required><br><br> <!-- Campo de texto para el nombre que es obligatorio. -->
+
                             <label for="email">Correo Electrónico:</label> <!-- Etiqueta para el correo electrónico. -->
-                            <input type="email" id="email" name="email" placeholder="tucorreo@email.com"><br><br>
-                            <!-- Campo de texto para el correo electrónico. -->
+                            <input type="email" id="email" name="email" placeholder="tucorreo@email.com"
+                                required><br><br> <!-- Campo de texto para el correo electrónico. -->
+
                             <label for="telefono">Teléfono:</label> <!-- Etiqueta para el teléfono. -->
                             <input type="tel" required name="telefono" id="telefono" pattern="[0-9]{9}"
                                 placeholder="611 222 333"><br><br>
                             <!-- Campo de texto para el teléfono con patrón específico. -->
+
                             <label for="asunto">Asunto:</label> <!-- Etiqueta para el asunto. -->
                             <input type="text" id="asunto" name="asunto" placeholder="asunto del mensaje"><br><br>
                             <!-- Campo de texto para el asunto. -->
+
                             <label for="mensaje">Mensaje:</label><br> <!-- Etiqueta para el mensaje. -->
                             <textarea id="mensaje" name="mensaje" rows="4" cols="50"
-                                placeholder="escribe tu mensaje aquí"></textarea><br><br>
+                                placeholder="escribe tu mensaje aquí" required></textarea><br><br>
                             <!-- Área de texto para el mensaje. -->
+
                             <input type="reset" value="Borrar"> <!-- Botón para borrar el formulario. -->
                             <input type="submit" value="Enviar"> <!-- Botón para enviar el formulario. -->
+                            <p id="formMensaje" style="display:none;"></p>
                         </form>
                     </div>
+
                     <br>
                     <hr>
+
                     <p><b>P.D.:</b> Estoy abierto a nuevas oportunidades de colaboración y aprendizaje,
                         contáctame
                         para discutir posibles proyectos o intercambiar ideas.
                     </p>
+
                 </section>
 
             </div>
@@ -537,6 +553,38 @@
         </footer>
 
     </div>
+
+    <script> // Script para enviar el formulario de contacto a través de Web3Forms
+        document.getElementById('formContacto').addEventListener('submit', function (e) {
+            e.preventDefault();
+            const form = e.target;
+            const data = new FormData(form);
+            const mensajeEl = document.getElementById('formMensaje');
+
+            fetch('https://api.web3forms.com/submit', {
+                method: 'POST',
+                headers: { 'Accept': 'application/json' },
+                body: data
+            })
+                .then((response) => response.json())
+                .then((result) => {
+                    if (result.success) {
+                        mensajeEl.textContent = '¡Gracias! Tu mensaje se ha enviado correctamente.';
+                        mensajeEl.style.color = 'green';
+                        form.reset();
+                    } else {
+                        mensajeEl.textContent = 'Ha ocurrido un error. Inténtalo de nuevo o escríbeme directamente.';
+                        mensajeEl.style.color = 'red';
+                    }
+                    mensajeEl.style.display = 'block';
+                })
+                .catch(() => {
+                    mensajeEl.textContent = 'No se ha podido enviar. Revisa tu conexión e inténtalo de nuevo.';
+                    mensajeEl.style.color = 'red';
+                    mensajeEl.style.display = 'block';
+                });
+        });
+    </script>
 
     <script> // Script para el menú de navegación responsive
         const menuToggle = document.querySelector('.menu-toggle'); // Selecciona el botón del menú
